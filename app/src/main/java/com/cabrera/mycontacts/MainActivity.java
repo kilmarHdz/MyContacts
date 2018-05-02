@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-    private final int[] ICONS = {R.drawable.phone,R.drawable.user, R.drawable.on};
+    private final int[] ICONS = {R.drawable.ic_local_phone_white,R.drawable.ic_contact_white, R.drawable.ic_star_on_white};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
+
+        askPermition();
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             tab.setIcon(ICONS[i]);
         }
 
-        askPermition();
+
 
     }
 
